@@ -10,7 +10,7 @@
     </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{ path('main page') }}"><i class="fa fa-microchip">Alluserstask</i></a>
+    <a class="navbar-brand" href="{{ path('main page') }}"><i class="fa fa-microchip">Alluserstasks</i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,9 +27,11 @@
             </li>
         </ul>
         <form class="form-inline">
-
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}     //если пользователь авторизован
+                <a href="{{ path('main_admin_page') }}" class="btn btn-outline-success my-2 my-sm-0 mr-5" type="submit">Go, Admin</a>
+            {% else %}
                 <a href="{{ path('main_admin_page') }}" class="btn btn-outline-success my-2 my-sm-0 mr-5" type="submit">Sign In</a>
-
+            {% endif %}
         </form>
     </div>
 </nav>

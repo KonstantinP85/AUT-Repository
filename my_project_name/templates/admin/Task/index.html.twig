@@ -5,7 +5,7 @@
         <div class="row no-gutters">
             <div class="col-12">
                 <h4 class="display-4 text-left">
-                    <a class="btn btn-success" href="{{ path('admin_user_create') }}">Create new user</a><br>
+                    <a class="btn btn-success" href="{{ path('admin_task_create') }}">Create new task</a><br>
                 </h4>
             </div>
         </div>
@@ -27,10 +27,10 @@
     <div class="container-fluid">
         <div class="row no-gutters">
             <div class="col-12">
-                <h2>All Users</h2>
+                <h2>All Tasks</h2>
                 <ul>
-                    {% for user in users %}
-                        <li>{{ user.email }}, {{ user.name }}, {{ user.roles | json_encode }}</li>
+                    {% for task_item in task %}
+                        <li>{{ task_item.content }}</li>
                     {% endfor %}
                 </ul>
 
