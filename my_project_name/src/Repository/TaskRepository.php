@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Task;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -12,39 +13,45 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Task[]    findAll()
  * @method Task[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class TaskRepository extends ServiceEntityRepository
+class TaskRepository extends ServiceEntityRepository implements TaskRepositoryInterface
 {
-    public function __construct(ManagerRegistry $registry)
+    private $manager;
+
+    public function __construct(ManagerRegistry $registry, EntityManagerInterface $manager)
     {
+        $this->manager = $manager;
         parent::__construct($registry, Task::class);
     }
 
-    // /**
-    //  * @return Task[] Returns an array of Task objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Task
+    public function getAllTask(): array
     {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return parent::findAll();
     }
-    */
+
+    public function getOneTask(int $taskId): object
+    {
+        return parent::find($taskId);
+    }
+
+    public function setCreateTask(Task $task): object
+    {
+        $task->setCreateAtValue();
+        $task->setExecute();
+        $this->manager->persist($task);   //фокусируемся
+        $this->manager->flush();          //добавляем
+        return $task;
+    }
+
+    public function setUpdateTask(Task $task): object
+    {
+        $this->manager->flush();
+        return $task;
+    }
+
+    public function setDeleteTask(Task $task)
+    {
+        $this->manager->remove($task);
+        $this->manager->flush();
+    }
 }
