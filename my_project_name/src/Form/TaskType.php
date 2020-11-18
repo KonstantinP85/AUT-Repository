@@ -35,9 +35,9 @@ class TaskType extends AbstractType
                 ]
             ))
             ->add('save', SubmitType::class, array(
-                'label' => 'Create',
+                'label' => 'Save',
                 'attr' => [
-                    'class' => 'btn btn-success',
+                    'class' => 'btn btn-success float-left mr-5',
                 ]
             ))
             ->add('delete', SubmitType::class, array(

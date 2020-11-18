@@ -11,26 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a56478fb-96ea-4f55-bc87-bbd22436e0b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my_project_name/migrations/Version20201115144011.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/migrations/Version20201115180052.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Security/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Entity/Task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Security/UserAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/admin/Task/form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project_name/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminTaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/adminbase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/adminbase.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project_name/src/Form/TaskType.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Form/TaskType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/user/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/user/form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/main/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/main/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +204,9 @@
       <workItem from="1605577526142" duration="1451000" />
       <workItem from="1605593876823" duration="1831000" />
       <workItem from="1605671310447" duration="1380000" />
-      <workItem from="1605673152492" duration="254000" />
+      <workItem from="1605673152492" duration="1634000" />
+      <workItem from="1605674952257" duration="2109000" />
+      <workItem from="1605678437678" duration="601000" />
     </task>
     <servers />
   </component>
@@ -266,5 +254,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605449067329" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605674816185">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605674816185" />
   </component>
 </project>

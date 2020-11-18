@@ -53,4 +53,39 @@ class AdminTaskController extends AdminBaseController
         $forRender['form'] = $form->createView();
         return $this->render('admin/task/form.html.twig', $forRender);
     }
+
+    /**
+     * @Route("/admin/task/update/{id}", name="admin_task_update")
+     * @param int $id
+     * @param Request $request
+     * @return RedirectResponse|Response
+     */
+    public function update(int $id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $task = $this->getDoctrine()->getRepository(Task::class)->find($id);
+        $form = $this->createForm(TaskType::class, $task);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid())
+        {
+            if ($form->get('save')->isClicked())
+            {
+
+                $this->addFlash('success', 'Task was updated!');
+
+            }
+            if ($form->get('delete')->isClicked())
+            {
+                $em->remove($task);
+                $this->addFlash('success', 'Task was deleted!');
+            }
+            $em->flush();
+            return $this->redirectToRoute('admin_task');
+        }
+        $forRender = parent::renderDefault();
+        $forRender['title'] = 'Update task';
+        $forRender['form'] = $form->createView();
+        return $this->render('admin/task/form.html.twig', $forRender);
+    }
+
 }

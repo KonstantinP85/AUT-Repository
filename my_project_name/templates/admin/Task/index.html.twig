@@ -30,7 +30,7 @@
                 <h2>All Tasks</h2>
                 <ul>
                     {% for task_item in task %}
-                        <li>{{ task_item.content }}</li>
+                        <li>{{ task_item.content }} <a class = "btn-link" href="{{ path('admin_task_update', {'id':task_item.id}) }}">Update</a></li>
                     {% endfor %}
                 </ul>
 
