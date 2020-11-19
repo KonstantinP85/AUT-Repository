@@ -19,6 +19,7 @@ class TaskType extends AbstractType
         $builder
             ->add('executor', EntityType::class, array(
                 'label' => 'Who will execute the task?',
+                'placeholder' => 'choose an executor',
                 'class' => User::class,
                 'choice_label' => 'name',
                 ))

@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AdminTaskController extends AdminBaseController
-{
+{   
     private $taskRepository;
 
     public function __construct(TaskRepositoryInterface $taskRepository)
@@ -32,6 +32,7 @@ class AdminTaskController extends AdminBaseController
         $forRender['title'] = 'Admin Tasks';
         $forRender['task'] = $this->taskRepository->getAllTask();
         return $this->render('admin/task/index.html.twig', $forRender);
+
     }
 
     /**
@@ -81,7 +82,6 @@ class AdminTaskController extends AdminBaseController
                 $this->taskRepository->setDeleteTask($task);
                 $this->addFlash('success', 'Task was deleted!');
             }
-
             return $this->redirectToRoute('admin_task');
         }
         $forRender = parent::renderDefault();

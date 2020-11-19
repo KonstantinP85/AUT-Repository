@@ -28,6 +28,39 @@
         <div class="row no-gutters">
             <div class="col-12">
                 <h2>All Tasks</h2>
+                    <div class="container-fluid">
+                        <div class="row no-gutters">
+                            <div class="col-9">
+                                <table class="table table-hover table-sm">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">№</th>
+                                        <th scope="col">Author</th>
+                                        <th scope="col">Executor</th>
+                                        <th scope="col">Task</th>
+                                        <th scope="col">Date Create</th>
+                                        <th scope="col">Execute</th>
+                                        <th scope="col">Update</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for task_item in task %}
+                                        <tr>
+                                            <th scope="row">{{ task_item.id }}</th>
+                                            <td>{{ task_item.author }}</td>
+                                            <td>{{ task_item.author }}</td>
+                                            <td>{{ task_item.content }}</td>
+                                            <td>{{ task_item.create_at | date('d-m-Y') }}</td>
+                                            <td>{{ task_item.execute }}</td>
+                                            <td><a class = "btn btn-primary" href="{{ path('admin_task_update', {'id':task_item.id}) }}">
+                                                    Update task</a></td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 <ul>
                     {% for task_item in task %}
                         <li>{{ task_item.content }} <a class = "btn-link" href="{{ path('admin_task_update', {'id':task_item.id}) }}">Update</a></li>
