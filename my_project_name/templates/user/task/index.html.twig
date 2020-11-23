@@ -1,0 +1,39 @@
+{% extends 'user/userbase.html.twig' %}
+{% block body %}
+
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row no-gutters justify-content-left">
+                            <h4>These are your tasks</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-7">
+                            <table class="table table-hover table-sm">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Date Create</th>
+                                    <th scope="col">Execute</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for task_item in task %}
+                                    <tr>
+                                        <td>{{ task_item.author }}</td>
+                                        <td>{{ task_item.content }}</td>
+                                        <td>{{ task_item.create_at | date('d/m/Y H:i') }}</td>
+                                        <td>{{ task_item.execute }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+{% endblock %}

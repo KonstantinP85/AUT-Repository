@@ -32,7 +32,6 @@ class AdminTaskController extends AdminBaseController
         $forRender['title'] = 'Admin Tasks';
         $forRender['task'] = $this->taskRepository->getAllTask();
         return $this->render('admin/task/index.html.twig', $forRender);
-
     }
 
     /**
@@ -82,6 +81,13 @@ class AdminTaskController extends AdminBaseController
                 $this->taskRepository->setDeleteTask($task);
                 $this->addFlash('success', 'Task was deleted!');
             }
+            if ($form->get('execute')->isClicked())
+            {
+                $task->setDraft();
+                $this->taskRepository->setUpdateTask($task);
+                $this->addFlash('success', 'Task was performed!');
+            }
+
             return $this->redirectToRoute('admin_task');
         }
         $forRender = parent::renderDefault();
@@ -89,5 +95,6 @@ class AdminTaskController extends AdminBaseController
         $forRender['form'] = $form->createView();
         return $this->render('admin/task/form.html.twig', $forRender);
     }
+
 
 }

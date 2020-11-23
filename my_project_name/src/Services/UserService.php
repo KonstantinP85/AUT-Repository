@@ -32,10 +32,9 @@ class UserService
      */
     public function handleCreate(User $user)
     {
-
         $password = $this->passwordEncoder->encodePassword($user, $user->getPlainPassword()); //шифруем пароль
         $user->setPassword($password);        //  помещаем пароль в сущность юзер
-        $user->setRoles(["ROLE_ADMIN"]);
+        $user->setRoles(["ROLE_USER"]);
         $this->userRepository->setCreate($user);
 
         return $this;

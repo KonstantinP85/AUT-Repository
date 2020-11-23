@@ -45,6 +45,7 @@ class TaskRepository extends ServiceEntityRepository implements TaskRepositoryIn
 
     public function setUpdateTask(Task $task): object
     {
+
         $this->manager->flush();
         return $task;
     }

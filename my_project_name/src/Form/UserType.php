@@ -24,7 +24,7 @@ class UserType extends AbstractType
             ->add('name', TextType::class, array(
                 'label' => 'Name User',
                 'attr' => [
-                    'placeholder' => 'Enter the name',
+                    'placeholder' => '',
                 ]
             ))
             ->add('plainPassword', RepeatedType::class, array(
@@ -38,10 +38,14 @@ class UserType extends AbstractType
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Save'
-            ));
-
+            ))
+            ->add('delete', SubmitType::class, array(
+            'label' => 'Delete',
+            'attr' => [
+                'class' => 'btn btn-danger',
+            ]
+        ))
         ;
-
     }
 
     public function configureOptions(OptionsResolver $resolver)

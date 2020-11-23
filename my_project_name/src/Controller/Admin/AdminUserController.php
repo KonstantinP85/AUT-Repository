@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
 
 class AdminUserController extends AdminBaseController
 {
@@ -42,6 +42,7 @@ class AdminUserController extends AdminBaseController
         $forRender['users'] = $this->userRepository->getAll();
         return $this->render('admin/user/index.html.twig', $forRender);
     }
+
     /**
      * @Route("/admin/user/create", name="admin_user_create")
      * @param Request $request
@@ -53,7 +54,7 @@ class AdminUserController extends AdminBaseController
         $form = $this->createForm(UserType::class, $user); //вписал шаблон формы
         $form->handleRequest($request);                         //получаем данные из формы
 
-        if(($form->isSubmitted()) && ($form->isValid()))        //проверяем данные из формы
+        if (($form->isSubmitted()) && ($form->isValid()))        //проверяем данные из формы
         {
             $this->userService->handleCreate($user);
             $this->addFlash('success', 'User was added!');
@@ -78,15 +79,20 @@ class AdminUserController extends AdminBaseController
         $formUser = $this->createForm(UserType::class); // создаем форму
         $formUser->handleRequest($request);
 
-        if ($formUser->isSubmitted() && $formUser->isValid())
-        {
-            $this->userService->handleUpdate($user);
-            $this->addFlash('success', 'User was updated!');
-            return $this->redirectToRoute('admin_user');
+        if ($formUser->isSubmitted() && $formUser->isValid()) {
+            if ($formUser->get('save')->isClicked()) {
+                $this->userRepository->setUpdateUser($user);
+                $this->addFlash('success', 'Task was updated!');
+            }
+            if ($formUser->get('delete')->isClicked()) {
+                $this->userRepository->setDeleteUser($user);
+                $this->addFlash('success', 'Task was deleted!');
+            }
         }
         $forRender = parent::renderDefault();
         $forRender['title'] = 'Admin Update User';
         $forRender['form'] = $formUser->createView();
         return $this->render('admin/user/form.html.twig', $forRender);
     }
+
 }

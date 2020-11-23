@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -40,6 +42,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $name;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Task::class, mappedBy="performer")
+     */
+    private $executor;
+
+    public function __construct()
+    {
+        $this->executor = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -137,4 +149,41 @@ class User implements UserInterface
     {
         $this->name = $name;
     }
+
+    /**
+     * @return Collection|Task[]
+     */
+    public function getExecutor(): Collection
+    {
+        return $this->executor;
+    }
+
+    public function addExecutor(Task $executor): self
+    {
+        if (!$this->executor->contains($executor)) {
+            $this->executor[] = $executor;
+            $executor->setPerformer($this);
+        }
+
+        return $this;
+    }
+
+    public function removeExecutor(Task $executor): self
+    {
+        if ($this->executor->removeElement($executor)) {
+            // set the owning side to null (unless already changed)
+            if ($executor->getPerformer() === $this) {
+                $executor->setPerformer(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString()
+    {
+        // to show the name of the Category in the select
+        return $this->name;
+    }
+
+
 }

@@ -21,12 +21,14 @@ class TaskType extends AbstractType
                 'label' => 'Who will execute the task?',
                 'placeholder' => 'choose an executor',
                 'class' => User::class,
-                'choice_label' => 'name',
+                'choice_label' => function ($user) {
+                    return (string) $user->getName();
+                }
                 ))
             ->add('author', TextType::class, array(
                 'label' => 'Who write the task?',
                 'attr' => [
-                    'placeholder' => 'Enter the task',
+                    'placeholder' => '',
                 ]
             ))
             ->add('content', TextareaType::class, array(
@@ -45,6 +47,12 @@ class TaskType extends AbstractType
                 'label' => 'Delete',
                 'attr' => [
                     'class' => 'btn btn-danger',
+                ]
+            ))
+            ->add('execute', SubmitType::class, array(
+                'label' => 'Performed',
+                'attr' => [
+                    'class' => 'btn btn-secondary',
                 ]
             ))
         ;

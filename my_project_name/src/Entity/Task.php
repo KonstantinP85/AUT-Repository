@@ -47,6 +47,11 @@ class Task
      */
     private $executor;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="executor")
+     */
+    private $performer;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -118,6 +123,18 @@ class Task
     public function setExecutor(?User $executor): self
     {
         $this->executor = $executor;
+
+        return $this;
+    }
+
+    public function getPerformer(): ?User
+    {
+        return $this->performer;
+    }
+
+    public function setPerformer(?User $performer): self
+    {
+        $this->performer = $performer;
 
         return $this;
     }

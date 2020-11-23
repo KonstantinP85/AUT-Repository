@@ -976,57 +976,70 @@ SELECT|sys.sys_config:null
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="300" parent="288" name="IDX_527EDB258ABD09BB">
+    <column id="300" parent="288" name="performer_id">
+      <Position>7</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="301" parent="288" name="IDX_527EDB258ABD09BB">
       <ColNames>executor_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="301" parent="288" name="PRIMARY">
+    <index id="302" parent="288" name="IDX_527EDB256C6B33F3">
+      <ColNames>performer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="303" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="302" parent="288" name="FK_527EDB258ABD09BB">
+    <foreign-key id="304" parent="288" name="FK_527EDB258ABD09BB">
       <ColNames>executor_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="303" parent="289" name="id">
+    <foreign-key id="305" parent="288" name="FK_527EDB256C6B33F3">
+      <ColNames>performer_id</ColNames>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="306" parent="289" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="304" parent="289" name="email">
+    <column id="307" parent="289" name="email">
       <Position>2</Position>
       <DataType>varchar(180)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="305" parent="289" name="name">
+    <column id="308" parent="289" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="306" parent="289" name="roles">
+    <column id="309" parent="289" name="roles">
       <Position>4</Position>
       <DataType>json|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="307" parent="289" name="password">
+    <column id="310" parent="289" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="308" parent="289" name="UNIQ_8D93D649E7927C74">
+    <index id="311" parent="289" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="309" parent="289" name="PRIMARY">
+    <key id="312" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="310" parent="289" name="UNIQ_8D93D649E7927C74">
+    <key id="313" parent="289" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649E7927C74</UnderlyingIndexName>
     </key>
