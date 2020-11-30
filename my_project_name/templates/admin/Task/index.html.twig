@@ -40,6 +40,7 @@
                                         <th scope="col">Date Create</th>
                                         <th scope="col">Execute</th>
                                         <th scope="col">Update</th>
+                                        <th scope="col">Delete</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -52,6 +53,8 @@
                                             <td>{{ task_item.execute }}</td>
                                             <td><a class = "btn btn-primary" href="{{ path('admin_task_update', {'id':task_item.id}) }}">
                                                     Update task</a></td>
+                                            <td><a class = "btn btn-danger" href="{{ path('admin_task_delete', {'id':task_item.id}) }}">
+                                                    Delete</a></td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>

@@ -43,12 +43,6 @@ class TaskType extends AbstractType
                     'class' => 'btn btn-success float-left mr-5',
                 ]
             ))
-            ->add('delete', SubmitType::class, array(
-                'label' => 'Delete',
-                'attr' => [
-                    'class' => 'btn btn-danger',
-                ]
-            ))
             ->add('execute', SubmitType::class, array(
                 'label' => 'Performed',
                 'attr' => [

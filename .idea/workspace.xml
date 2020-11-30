@@ -11,38 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a56478fb-96ea-4f55-bc87-bbd22436e0b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my_project_name/public/assets/admin/js/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/public/assets/main/js/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Controller/User/UserBaseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Controller/User/UserHomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/src/Controller/User/UserTaskController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/user/task/form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/user/task/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_project_name/templates/user/userbase.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2c0f6fdb-319b-424c-b97a-7b1185dd0d75.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2c0f6fdb-319b-424c-b97a-7b1185dd0d75.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/public/assets/main/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/public/assets/main/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminTaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Main/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Main/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Entity/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Form/TaskType.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Form/TaskType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Security/UserAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Security/UserAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Services/UserService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/adminbase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/adminbase.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/main/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/main/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/main/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +140,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MYNEWSF/my_project_name" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -311,6 +282,13 @@
       <workItem from="1606107566034" duration="1635000" />
       <workItem from="1606109425418" duration="1654000" />
       <workItem from="1606113736379" duration="1019000" />
+      <workItem from="1606125864401" duration="1264000" />
+      <workItem from="1606131027762" duration="1602000" />
+      <workItem from="1606137541508" duration="63000" />
+      <workItem from="1606401454550" duration="1562000" />
+      <workItem from="1606403378812" duration="730000" />
+      <workItem from="1606496847514" duration="199000" />
+      <workItem from="1606753935501" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="form upgrade">
       <created>1605679183277</created>
@@ -333,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605762929173</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="last commit">
+      <created>1606126751163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606126751163</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +341,8 @@
     <MESSAGE value="form upgrade" />
     <MESSAGE value="TaskRepository" />
     <MESSAGE value="last" />
-    <option name="LAST_COMMIT_MESSAGE" value="last" />
+    <MESSAGE value="last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605450754016">
@@ -375,10 +361,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606105002764" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606056630684">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606497075061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606056630684" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606497075061" />
     <state x="462" y="135" key="NewPhpClassDialog" timestamp="1605928306072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
