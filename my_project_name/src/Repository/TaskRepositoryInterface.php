@@ -35,4 +35,14 @@ interface TaskRepositoryInterface
      * @param Task $task
      */
     public function setDeleteTask(Task $task);
+
+    /**
+     * @return Task[]
+     */
+    public function orderNoTask(): array;
+
+    /**
+     * @return Task[]
+     */
+    public function orderYesTask(): array;
 }

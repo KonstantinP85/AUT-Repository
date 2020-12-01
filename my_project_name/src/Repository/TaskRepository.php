@@ -55,4 +55,20 @@ class TaskRepository extends ServiceEntityRepository implements TaskRepositoryIn
         $this->manager->remove($task);
         $this->manager->flush();
     }
+
+    public function orderNoTask(): array
+    {
+        return parent::findBy(
+            ['execute' => 'No'],
+            ['create_at' => 'ASC']
+        );
+    }
+    public function orderYesTask(): array
+    {
+        return parent::findBy(
+            ['execute' => 'Yes'],
+            ['create_at' => 'ASC']
+        );
+    }
+
 }

@@ -24,41 +24,23 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid pl-25">
+    <div class="container-fluid">
         <div class="row no-gutters justify-content-left ">
             <div class="col-12">
                 <h4>All Tasks</h4>
                     <div class="container-fluid">
                         <div class="row no-gutters">
                             <div class="col-9">
-                                <table class="table table-hover table-sm">
-                                    <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">Author</th>
-                                        <th scope="col">Executor</th>
-                                        <th scope="col">Task</th>
-                                        <th scope="col">Date Create</th>
-                                        <th scope="col">Execute</th>
-                                        <th scope="col">Update</th>
-                                        <th scope="col">Delete</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for task_item in task %}
-                                        <tr>
-                                            <td>{{ task_item.author }}</td>
-                                            <td>{{ task_item.executor }}</td>
-                                            <td>{{ task_item.content }}</td>
-                                            <td>{{ task_item.create_at | date('d/m/Y H:i') }}</td>
-                                            <td>{{ task_item.execute }}</td>
-                                            <td><a class = "btn btn-primary" href="{{ path('admin_task_update', {'id':task_item.id}) }}">
-                                                    Update task</a></td>
-                                            <td><a class = "btn btn-danger" href="{{ path('admin_task_delete', {'id':task_item.id}) }}">
-                                                    Delete</a></td>
-                                        </tr>
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
+                                {% include 'admin/Task/table.html.twig' %}
+                            </div>
+                            <div class="col">
+                                <div class="row no-gutters justify-content-center">
+                                    <h5>Show</h5>
+                                </div>
+                                <div class="row no-gutters justify-content-center">
+                                    <button class="btn btn-success btn-sm mr-3" id="btn_orderyes">All completed</button>
+                                    <button class="btn btn-success btn-sm" id="btn_orderno">All not completed</button>
+                                </div>
                             </div>
                         </div>
                     </div>
