@@ -15,7 +15,7 @@ function edit_task(){
                     dataType: 'html',
                     data: {Edit_id:Edit_id},
                 })
-            location.reload();
+
         })
 
     })

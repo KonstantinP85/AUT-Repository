@@ -26,7 +26,7 @@
                                         <td>{{ task_item.author }}</td>
                                         <td>{{ task_item.content }}</td>
                                         <td>{{ task_item.create_at | date('d/m/Y H:i') }}</td>
-                                        <td>{{ task_item.execute }}</td>
+                                        <td><button class="btn-success" id="btn_edit" data-id="{{ task_item.id }}">{{ task_item.execute }}</button></td>
                                     </tr>
                                 {% endfor %}
                                 </tbody>
@@ -35,5 +35,26 @@
                     </div>
                 </div>
 
+    <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-lablelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role ="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Attention</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Did you complete this task? </p>
+                </div>
+                <div class="modal-footer">
+                    <p id="edit_message"></p>
+                    <button type="button" class="btn-success" id="btn_update">Yes</button>
+                    <button type="button" class="btn-danger" data-dismiss="modal" id="btn_close">No</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

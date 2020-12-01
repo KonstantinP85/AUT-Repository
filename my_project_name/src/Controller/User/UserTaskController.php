@@ -6,15 +6,21 @@ namespace App\Controller\User;
 
 use App\Entity\Task;
 
+use App\Repository\TaskRepositoryInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 class UserTaskController extends UserBaseController
 {
     private $taskRepository;
+
+    public function __construct(TaskRepositoryInterface $taskRepository)
+    {
+        $this->taskRepository = $taskRepository;
+
+    }
 
     /**
      * @Route("/profile/task", name="user_task")
@@ -32,18 +38,15 @@ class UserTaskController extends UserBaseController
 
     /**
      * @Route("/profile/task/update", name="user_task_update")
-     *
      * @param Request $request
      * @return RedirectResponse
      */
     public function update(Request $request)
     {
             $id = $request->get('Edit_id');
-
             $task = $this->taskRepository->getOneTask($id);
             $task->setDraft();
             $this->taskRepository->setUpdateTask($task);
-
             return $this->redirectToRoute('user_task');
     }
 
