@@ -29,6 +29,7 @@ class TaskType extends AbstractType
                 'label' => 'Who write the task?',
                 'attr' => [
                     'placeholder' => '',
+                    'v-model.lazy' => 'text',
                 ]
             ))
             ->add('content', TextareaType::class, array(
