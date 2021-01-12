@@ -58,10 +58,16 @@ class TaskRepository extends ServiceEntityRepository implements TaskRepositoryIn
 
     public function orderTask(string $id): array
     {
-        return parent::findBy(
-            ['execute' => "$id"],
-            ['create_at' => 'ASC']
-        );
+        if ($id=='All')
+        {
+            return parent::findAll();
+        }
+        else {
+            return parent::findBy(
+                ['execute' => "$id"],
+                ['create_at' => 'ASC']
+            );
+        }
     }
 
 }
