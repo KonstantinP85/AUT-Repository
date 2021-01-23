@@ -2,14 +2,26 @@
 {% block title %}{{ title }}{% endblock %}
 {% block body %}
     <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="col-12">
-                <h5 class="display-4 text-center">
-                    Good day, admin
-                </h5>
+        <div class="row no-gutters mt-3">
+            <div class="col-3">
+                <h2>
+                    Good day, admin</h2>
+            </div>
+            <div class="col-3">
+                <h4 class="text-center mt-3">
+                    Financial news
+                </h4>
+                {{ form(form) }}
+            </div>
+            <div class="col mt-3">
+                {% if data is defined %}
+                    {% for data_item in data %}
+                        <h4>{{ data_item.headline }}</h4>
+                        <p>{{ data_item.summary }}</p>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
-
 
 {% endblock %}

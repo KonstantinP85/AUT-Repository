@@ -23,6 +23,8 @@
       <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/doctrine/persistence" />
       <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/doctrine/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/knplabs/knp-components" />
+      <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/knplabs/knp-paginator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/my_project_name/vendor/ocramius/proxy-manager" />

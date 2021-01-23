@@ -11,15 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a56478fb-96ea-4f55-bc87-bbd22436e0b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my_project_name/src/Form/FinanceType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_project_name/src/Services/FinanceNewsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfonyproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfonyproject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/public/assets/admin/js/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/public/assets/admin/js/my.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project_name/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminHomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Controller/Admin/AdminTaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Form/TaskType.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Form/TaskType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/src/Repository/TaskRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/Task/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/Task/form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/Task/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/adminbase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/adminbase.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project_name/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/my_project_name/templates/admin/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +134,8 @@
       <path value="$PROJECT_DIR$/my_project_name/vendor/composer" />
       <path value="$PROJECT_DIR$/my_project_name/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/my_project_name/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/my_project_name/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/my_project_name/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kK18GUZyxWQXaa8FTjpkrMLpl7" />
@@ -327,7 +329,31 @@
       <workItem from="1608480192641" duration="1584000" />
       <workItem from="1608482148551" duration="1535000" />
       <workItem from="1608484088765" duration="1502000" />
-      <workItem from="1608485820193" duration="713000" />
+      <workItem from="1608485820193" duration="1598000" />
+      <workItem from="1608514125514" duration="93000" />
+      <workItem from="1608948558677" duration="655000" />
+      <workItem from="1608949497040" duration="840000" />
+      <workItem from="1608951922593" duration="110000" />
+      <workItem from="1609522094800" duration="1515000" />
+      <workItem from="1609549390543" duration="1727000" />
+      <workItem from="1609551293163" duration="1729000" />
+      <workItem from="1609553118659" duration="3118000" />
+      <workItem from="1609638816916" duration="1354000" />
+      <workItem from="1609725694907" duration="1129000" />
+      <workItem from="1610426218011" duration="867000" />
+      <workItem from="1610427219968" duration="1543000" />
+      <workItem from="1611283972610" duration="917000" />
+      <workItem from="1611285080749" duration="86000" />
+      <workItem from="1611331629220" duration="747000" />
+      <workItem from="1611332558795" duration="1657000" />
+      <workItem from="1611334409922" duration="1672000" />
+      <workItem from="1611336293510" duration="1629000" />
+      <workItem from="1611367345694" duration="1320000" />
+      <workItem from="1611371021468" duration="1604000" />
+      <workItem from="1611372879369" duration="1224000" />
+      <workItem from="1611374878475" duration="1634000" />
+      <workItem from="1611377017499" duration="1631000" />
+      <workItem from="1611378876355" duration="1198000" />
     </task>
     <task id="LOCAL-00001" summary="form upgrade">
       <created>1605679183277</created>
@@ -389,13 +415,18 @@
     <MESSAGE value="last" />
     <MESSAGE value="last commit" />
     <MESSAGE value="added f delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="added f delete" />
+    <MESSAGE value="change orderTask" />
+    <option name="LAST_COMMIT_MESSAGE" value="change orderTask" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605450754016">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605450754016" />
+    <state x="544" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611284535355">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="544" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1611284535355" />
     <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1605707312230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -404,18 +435,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="143" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1605436804301" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606757083623">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611379235328">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606757083623" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1608338422886">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611379235328" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1611285176613">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608338422886" />
-    <state x="462" y="135" key="NewPhpClassDialog" timestamp="1605928306072">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611285176613" />
+    <state x="462" y="135" key="NewPhpClassDialog" timestamp="1611378348833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="462" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1605928306072" />
+    <state x="462" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1611378348833" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1611284544811">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1611284544811" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1605449067329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
