@@ -20,11 +20,16 @@ class AdminUserController extends AdminBaseController
      * @var UserRepositoryInterface
      */
     private $userRepository;
+
     /**
      * @var UserService
      */
     private $userService;
 
+    /**
+     * @param UserRepositoryInterface $userRepository
+     * @param UserService $userService
+     */
     public function __construct(UserRepositoryInterface $userRepository, UserService $userService)
     {
         $this->userRepository = $userRepository;
@@ -35,11 +40,12 @@ class AdminUserController extends AdminBaseController
      * @Route("/admin/user", name="admin_user")
      * @return Response
      */
-    public function index()
+    public function index(): Response
     {
         $forRender = parent::renderDefault();
         $forRender['title'] = 'Admin Users';
         $forRender['users'] = $this->userRepository->getAll();
+
         return $this->render('admin/user/index.html.twig', $forRender);
     }
 
@@ -51,32 +57,31 @@ class AdminUserController extends AdminBaseController
     public function create(Request $request)
     {
         $user = new User();
-        $form = $this->createForm(UserType::class, $user); //вписал шаблон формы
-        $form->handleRequest($request);                         //получаем данные из формы
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
 
-        if (($form->isSubmitted()) && ($form->isValid()))        //проверяем данные из формы
-        {
+        if (($form->isSubmitted()) && ($form->isValid())) {
             $this->userService->handleCreate($user);
             $this->addFlash('success', 'User was added!');
             return $this->redirectToRoute('admin_user');
         }
         $forRender = parent::renderDefault();
         $forRender['title'] = 'Admin registration form';
-        $forRender['form'] = $form->createView();                //для создания вида формы
-        return $this->render('admin/user/form.html.twig', $forRender);
+        $forRender['form'] = $form->createView();
 
+        return $this->render('admin/user/form.html.twig', $forRender);
     }
 
     /**
      * @Route("/admin/user/update/{userId}", name="admin_user_update")
      * @param Request $request
      * @param int $userId
-     * @return RedirectResponse|Response
+     * @return Response
      */
-    public function update(Request $request, int $userId)
+    public function update(Request $request, int $userId): Response
     {
-        $user = $this->userRepository->getOne($userId);   // получаем id пользователя
-        $formUser = $this->createForm(UserType::class); // создаем форму
+        $user = $this->userRepository->getOne($userId);
+        $formUser = $this->createForm(UserType::class);
         $formUser->handleRequest($request);
 
         if ($formUser->isSubmitted() && $formUser->isValid()) {
@@ -92,7 +97,7 @@ class AdminUserController extends AdminBaseController
         $forRender = parent::renderDefault();
         $forRender['title'] = 'Admin Update User';
         $forRender['form'] = $formUser->createView();
+
         return $this->render('admin/user/form.html.twig', $forRender);
     }
-
 }

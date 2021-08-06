@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller\Admin;
 
 use App\Form\FinanceType;
@@ -13,6 +12,9 @@ class AdminHomeController extends AdminBaseController
 {
     private $financeNews;
 
+    /**
+     * @param FinanceNewsService $financeNews
+     */
     public function __construct(FinanceNewsService $financeNews)
     {
         $this->financeNews = $financeNews;
@@ -23,18 +25,17 @@ class AdminHomeController extends AdminBaseController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
+    public function index(Request $request): Response
     {
         $form = $this -> createForm(FinanceType::class);
         $form->handleRequest($request);
         $forRender = parent::renderDefault();
-        if ($form->isSubmitted() && $form->isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $data=$form->getData();
             $forRender['data']=$this->financeNews->fin_news($data);
         }
         $forRender['form'] = $form->createView();
+
         return $this->render('admin/index.html.twig', $forRender);
     }
-
 }

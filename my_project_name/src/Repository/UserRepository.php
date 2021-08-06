@@ -33,7 +33,6 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     }
 
     /**
-     * Used to upgrade (rehash) the user's password automatically over time.
      * @param UserInterface $user
      * @param string $newEncodedPassword
      * @throws ORMException
@@ -50,34 +49,54 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->_em->flush();
     }
 
-
+    /**
+     * @param int $userId
+     * @return object
+     */
     public function getOne(int $userId): object
     {
         return parent::find($userId);
     }
 
+    /**
+     * @return array
+     */
     public function getAll(): array
     {
         return parent::findAll();
     }
 
+    /**
+     * @param User $user
+     */
     public function setCreate(User $user)
     {
         $this->entityManager->persist($user);
         $this->entityManager->flush();
     }
 
+    /**
+     * @param User $user
+     */
     public function setSave(User $user)
     {
         $this->entityManager->flush();
     }
+
+    /**
+     * @param User $user
+     * @return object
+     */
     public function setUpdateUser(User $user): object
     {
-
         $this->entityManager->flush();
+
         return $user;
     }
 
+    /**
+     * @param User $user
+     */
     public function setDeleteUser(User $user)
     {
         $this->entityManager->remove($user);

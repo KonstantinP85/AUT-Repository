@@ -10,6 +10,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class FinanceType extends AbstractType
 {
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -40,10 +44,12 @@ class FinanceType extends AbstractType
         ;
     }
 
+    /**
+     * @param OptionsResolver $resolver
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            // Configure your form options here
             'csrf_protection' => false
         ]);
     }

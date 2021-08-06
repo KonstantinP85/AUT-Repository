@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller\User;
 
 use Symfony\Component\HttpFoundation\Response;
@@ -12,10 +11,10 @@ class UserHomeController extends UserBaseController
      * @Route("/profile", name="main_user_page")
      * @return Response
      */
-    public function index()
+    public function index(): Response
     {
-
         $forRender = parent:: renderDefault();
+
         return $this->render('user/index.html.twig', $forRender);
     }
 }

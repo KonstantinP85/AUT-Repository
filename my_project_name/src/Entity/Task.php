@@ -52,16 +52,25 @@ class Task
      */
     private $performer;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getAuthor(): ?string
     {
         return $this->author;
     }
 
+    /**
+     * @param string $author
+     */
     public function setAuthor(string $author): self
     {
         $this->author = $author;
@@ -69,11 +78,17 @@ class Task
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -81,6 +96,9 @@ class Task
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getCreate_At(): ?\DateTimeInterface
     {
         return $this->create_at;
@@ -93,6 +111,9 @@ class Task
 
     }
 
+    /**
+     * @param \DateTimeInterface $create_at
+     */
     public function setCreateAt(\DateTimeInterface $create_at): self
     {
         $this->create_at = $create_at;
@@ -100,6 +121,9 @@ class Task
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getExecute(): ?string
     {
         return $this->execute;
@@ -115,11 +139,17 @@ class Task
         $this->execute = self::DRAFT;
     }
 
+    /**
+     * @return User|null
+     */
     public function getExecutor(): ?User
     {
         return $this->executor;
     }
 
+    /**
+     * @param User|null $executor
+     */
     public function setExecutor(?User $executor): self
     {
         $this->executor = $executor;
@@ -127,16 +157,21 @@ class Task
         return $this;
     }
 
+    /**
+     * @return User|null
+     */
     public function getPerformer(): ?User
     {
         return $this->performer;
     }
 
+    /**
+     * @param User|null $performer
+     */
     public function setPerformer(?User $performer): self
     {
         $this->performer = $performer;
 
         return $this;
     }
-
 }

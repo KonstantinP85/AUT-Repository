@@ -53,16 +53,25 @@ class User implements UserInterface
         $this->executor = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * @param string $email
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -86,12 +95,14 @@ class User implements UserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
 
+    /**
+     * @param array $roles
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
@@ -107,6 +118,9 @@ class User implements UserInterface
         return (string) $this->password;
     }
 
+    /**
+     * @param string $password
+     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
@@ -130,21 +144,34 @@ class User implements UserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
+
+    /**
+     * @return mixed
+     */
     public function getPlainPassword()
     {
         return $this->plainPassword;
     }
 
+    /**
+     * @param $password
+     */
     public function setPlainPassword($password)
     {
         $this->plainPassword = $password;
     }
 
+    /**
+     * @return mixed
+     */
     public function getName()
     {
         return $this->name;
     }
 
+    /**
+     * @param $name
+     */
     public function setName($name)
     {
         $this->name = $name;
@@ -158,6 +185,9 @@ class User implements UserInterface
         return $this->executor;
     }
 
+    /**
+     * @param Task $executor
+     */
     public function addExecutor(Task $executor): self
     {
         if (!$this->executor->contains($executor)) {
@@ -168,10 +198,12 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     * @param Task $executor
+     */
     public function removeExecutor(Task $executor): self
     {
         if ($this->executor->removeElement($executor)) {
-            // set the owning side to null (unless already changed)
             if ($executor->getPerformer() === $this) {
                 $executor->setPerformer(null);
             }
@@ -179,11 +211,9 @@ class User implements UserInterface
 
         return $this;
     }
+
     public function __toString()
     {
-        // to show the name of the Category in the select
         return $this->name;
     }
-
-
 }

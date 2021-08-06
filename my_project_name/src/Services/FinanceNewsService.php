@@ -11,7 +11,7 @@ class FinanceNewsService
      * @param $data
      * @return Response
      */
-    public function fin_news($data)
+    public function fin_news($data): Response
     {
         $ticker = $data['ticker'];
         $time_from = $data['time_from'];
@@ -28,6 +28,7 @@ class FinanceNewsService
         $response = curl_exec($c_request);
         curl_close($c_request);
         $data = json_decode($response);
+
         return $data;
     }
 }
